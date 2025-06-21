@@ -16,14 +16,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav
       style={{
-        width: "100%",           // ✅ force full width
+        width: "100%",           
         backgroundColor,
         color: textColor,
-        display: "flex",         // ✅ flex layout
+        display: "flex",         
         alignItems: "center",
         justifyContent: "space-between",
         padding: "1rem 2rem",
-        boxSizing: "border-box", // ✅ padding inside
+        boxSizing: "border-box", 
       }}
     >
       <h1 style={{ margin: 0 }}>{title}</h1>
