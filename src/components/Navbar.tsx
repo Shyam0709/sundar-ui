@@ -19,14 +19,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         backgroundColor: backgroundColor,
         color: textColor,
         padding: "1rem 2rem",
-        width: "100%",            // ✅ force full width
-        boxSizing: "border-box",  // ✅ include padding
+        width: "100%",            
+        boxSizing: "border-box",  
       }}
     >
       <nav
         style={{
-          maxWidth: "1200px",    // ✅ optional: limit content width
-          margin: "0 auto",      // ✅ center content
+          maxWidth: "1200px",    
+          margin: "0 auto",      
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

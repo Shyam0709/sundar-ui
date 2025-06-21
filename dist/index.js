@@ -32,34 +32,45 @@ var Navbar = ({
   backgroundColor = "#333",
   textColor = "#fff"
 }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-    "nav",
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+    "header",
     {
       style: {
         backgroundColor,
         color: textColor,
         padding: "1rem 2rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
+        width: "100%",
+        boxSizing: "border-box"
       },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { margin: 0 }, children: title }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-          "a",
-          {
-            href: link.href,
-            style: {
-              color: textColor,
-              marginLeft: "1.5rem",
-              textDecoration: "none",
-              fontWeight: "500"
-            },
-            children: link.label
+      children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        "nav",
+        {
+          style: {
+            maxWidth: "1200px",
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between"
           },
-          link.href
-        )) })
-      ]
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { margin: 0 }, children: title }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              "a",
+              {
+                href: link.href,
+                style: {
+                  color: textColor,
+                  marginLeft: "1.5rem",
+                  textDecoration: "none",
+                  fontWeight: "500"
+                },
+                children: link.label
+              },
+              link.href
+            )) })
+          ]
+        }
+      )
     }
   );
 };
