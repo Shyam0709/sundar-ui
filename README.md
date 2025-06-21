@@ -7,8 +7,11 @@ A simple React UI component library with customizable components.
 ```bash
 npm install sundar-ui
 
-Usage
-jsx
+
+
+
+## Usage
+
 import { Navbar } from "sundar-ui";
 
 <Navbar
