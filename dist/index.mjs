@@ -11,16 +11,13 @@ var Navbar = ({
     {
       style: {
         width: "100%",
-        // ✅ force full width
         backgroundColor,
         color: textColor,
         display: "flex",
-        // ✅ flex layout
         alignItems: "center",
         justifyContent: "space-between",
         padding: "1rem 2rem",
         boxSizing: "border-box"
-        // ✅ padding inside
       },
       children: [
         /* @__PURE__ */ jsx("h1", { style: { margin: 0 }, children: title }),
