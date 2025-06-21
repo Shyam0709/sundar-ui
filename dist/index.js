@@ -32,18 +32,36 @@ var Navbar = ({
   backgroundColor = "#333",
   textColor = "#fff"
 }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { style: { backgroundColor, color: textColor, padding: "1rem" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { display: "inline-block", marginRight: "2rem" }, children: title }),
-    links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-      "a",
-      {
-        href: link.href,
-        style: { color: textColor, marginRight: "1rem", textDecoration: "none" },
-        children: link.label
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+    "nav",
+    {
+      style: {
+        backgroundColor,
+        color: textColor,
+        padding: "1rem 2rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between"
       },
-      link.href
-    ))
-  ] });
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { margin: 0 }, children: title }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "a",
+          {
+            href: link.href,
+            style: {
+              color: textColor,
+              marginLeft: "1.5rem",
+              textDecoration: "none",
+              fontWeight: "500"
+            },
+            children: link.label
+          },
+          link.href
+        )) })
+      ]
+    }
+  );
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

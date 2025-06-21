@@ -14,17 +14,33 @@ export const Navbar: React.FC<NavbarProps> = ({
   textColor = "#fff",
 }) => {
   return (
-    <nav style={{ backgroundColor, color: textColor, padding: "1rem" }}>
-      <h1 style={{ display: "inline-block", marginRight: "2rem" }}>{title}</h1>
-      {links.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          style={{ color: textColor, marginRight: "1rem", textDecoration: "none" }}
-        >
-          {link.label}
-        </a>
-      ))}
+    <nav
+      style={{
+        backgroundColor,
+        color: textColor,
+        padding: "1rem 2rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <h1 style={{ margin: 0 }}>{title}</h1>
+      <div>
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            style={{
+              color: textColor,
+              marginLeft: "1.5rem",
+              textDecoration: "none",
+              fontWeight: "500",
+            }}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 };
