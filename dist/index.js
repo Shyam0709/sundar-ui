@@ -32,45 +32,38 @@ var Navbar = ({
   backgroundColor = "#333",
   textColor = "#fff"
 }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-    "header",
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+    "nav",
     {
       style: {
+        width: "100%",
+        // ✅ force full width
         backgroundColor,
         color: textColor,
+        display: "flex",
+        // ✅ flex layout
+        alignItems: "center",
+        justifyContent: "space-between",
         padding: "1rem 2rem",
-        width: "100%",
         boxSizing: "border-box"
+        // ✅ padding inside
       },
-      children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-        "nav",
-        {
-          style: {
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between"
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { margin: 0 }, children: title }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: "1.5rem" }, children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "a",
+          {
+            href: link.href,
+            style: {
+              color: textColor,
+              textDecoration: "none",
+              fontWeight: "500"
+            },
+            children: link.label
           },
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { style: { margin: 0 }, children: title }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: links.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-              "a",
-              {
-                href: link.href,
-                style: {
-                  color: textColor,
-                  marginLeft: "1.5rem",
-                  textDecoration: "none",
-                  fontWeight: "500"
-                },
-                children: link.label
-              },
-              link.href
-            )) })
-          ]
-        }
-      )
+          link.href
+        )) })
+      ]
     }
   );
 };
