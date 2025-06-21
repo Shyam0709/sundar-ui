@@ -13,6 +13,7 @@ npm install sundar-ui
 
 ## Usage
 
+```bash
 import { Navbar } from "sundar-ui";
 
 <Navbar
@@ -24,3 +25,4 @@ import { Navbar } from "sundar-ui";
   backgroundColor="#6200ea"
   textColor="#fff"
 />
+```
