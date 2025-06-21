@@ -6,6 +6,7 @@ A simple React UI component library with customizable components.
 
 ```bash
 npm install sundar-ui
+```
 
 
 
